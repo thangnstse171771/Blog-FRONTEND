@@ -10,7 +10,7 @@ function App() {
   });
 
   const fetchUsers = async () => {
-    const res = await axios.get('http://localhost:5000/api/users');
+    const res = await axios.get('https://blog-backend-xy27.onrender.com/api/users');
     setUsers(res.data);
   };
 
@@ -20,7 +20,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:5000/api/users', formData);
+    await axios.post('https://blog-backend-xy27.onrender.com/api/users', formData);
     setFormData({ name: '', email: '', message: '' });
     fetchUsers();  // refresh the list of users
   };
